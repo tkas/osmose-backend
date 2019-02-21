@@ -29,7 +29,7 @@ username = pwd.getpwuid(os.getuid())[0]
 dir_osmose = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # path to a temporary space, that doesn't need to be backup
-dir_work = "/data/work/%s" % (username)
+dir_work = "/home/osmose/work"
 
 # frontend which will get results
 url_frontend_update = os.environ.get("URL_FRONTEND_UPDATE", u"http://osmose.openstreetmap.fr/control/send-update")
@@ -39,7 +39,8 @@ url_frontend_opendata_update = u"http://opendata.osmose.openstreetmap.fr/control
 bin_osmosis = dir_osmose + "/osmosis/osmosis-0.47/bin/osmosis"
 
 # where osmconvert is located
-bin_osmconvert = "./osmconvert/osmconvert"
+#bin_osmconvert = "./osmconvert/osmconvert"
+bin_osmconvert = "/usr/local/bin/osmconvert"
 
 ### no need to modify following variables ###
 

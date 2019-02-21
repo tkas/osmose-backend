@@ -112,16 +112,17 @@ class OsmOsisManager:
 
   def lock_database(self):
     osmosis_lock = False
-    for trial in range(60):
+    # Si 15*4 is minute, * 60 is hour * 12 hours to wait at max
+    for trial in xrange(2880):
       # acquire lock
       try:
         lfil = "/tmp/osmose-osmosis_import"
         osmosis_lock = lockfile(lfil)
         break
       except:
-        self.logger.err("can't lock %s" % lfil)
-        self.logger.log("waiting 2 minutes")
-        time.sleep(2*60)
+        self.logger.log(self.logger.log_av_r + "can't lock %s" % lfil + self.logger.log_ap)
+        #self.logger.log("waiting 15 seconds")
+        time.sleep(15)
 
     if not osmosis_lock:
       self.logger.err("definitively can't lock")
