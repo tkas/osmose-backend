@@ -63,14 +63,17 @@ msgstr ""
 "Project-Id-Version: Osmose\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-28 19:47+0200\n"
-"PO-Revision-Date: 2014-04-30 17:25+0000\n"
-"Last-Translator: Gaëtan GOSSET, 2024-2025\n"
-"Language-Team: French (http://app.transifex.com/openstreetmap-france/osmose/language/fr/)\n"
+"PO-Revision-Date: 2025-07-15 03:38+0000\n"
+"Last-Translator: Florian Stosse <florian.stosse@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/osmose/backend/fr/"
+">\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
+"1000000 == 0 ? 1 : 2;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: ../analysers/analyser_merge_college_FR.py:31
 msgid "College not integrated"
@@ -1610,7 +1613,7 @@ msgstr "Interpolation sur un nœud de plusieurs relations “associatedStreet”
 
 #: ../analysers/analyser_osmosis_relation_associatedStreet.py:653
 msgid "Tag \"addr:street\" not matching a street name around"
-msgstr "L’attribut “addr:street” ne correspond à aucun nom de rue à proximité "
+msgstr "L’attribut “addr:street” ne correspond à aucun nom de rue à proximité"
 
 #: ../plugins/Addr_Interpolation.py:31
 msgid "Misusing addr:interpolation in combination with other tags"
@@ -1680,7 +1683,7 @@ msgstr "Les intervalles conditionnels ne correspondent pas avec les heures d’o
 #: ../analysers/analyser_merge_defibrillators_FR_saintmalo.py:31
 #: ../analysers/analyser_merge_defibrillators_FR_toulouse.py:31
 msgid "Defibrillator not integrated"
-msgstr "Défibrillateur non intégré "
+msgstr "Défibrillateur non intégré"
 
 #: ../analysers/analyser_merge_museum_FR.py:31
 msgid "Museum not integrated"
@@ -1743,7 +1746,7 @@ msgstr "Les codes FANTOIR « B » à « W » sont pour les attributs :
 
 #: ../analysers/analyser_osmosis_camp_pitch_out_of_camp_site.py:92
 msgid "Camp pitches outside a camp site"
-msgstr "Emplacements de camping à l’extérieur d’un camping "
+msgstr "Emplacements de camping à l’extérieur d’un camping"
 
 #: ../analysers/analyser_merge_geodesie.py:28
 msgid ""
@@ -1823,7 +1826,7 @@ msgstr "Support radio ({0}), intégration possible"
 #: ../analysers/analyser_merge_radio_support_FR.py:35
 #, python-brace-format
 msgid "Radio support ({0}) update"
-msgstr "Support radio  ({0}) à mettre à jour"
+msgstr "Support radio ({0}) à mettre à jour"
 
 #: ../analysers/analyser_merge_school_FR.py:54
 msgid ""
@@ -1867,7 +1870,7 @@ msgstr "Supprimer le chemin, retirer l'attribut de limite ou l'intégrer à une 
 
 #: ../analysers/analyser_osmosis_boundary_hole.py:68
 msgid "An area is marked as not belonging to any city."
-msgstr "Une zone est marquée comme n'appartenant à aucune commune. "
+msgstr "Une zone est marquée comme n'appartenant à aucune commune."
 
 #: ../analysers/analyser_osmosis_boundary_intersect.py:100
 msgid "Check the type of border and keep the best one or merge them."
@@ -2034,7 +2037,10 @@ msgid ""
 "![](https://wiki.openstreetmap.org/w/images/b/b5/Osmose-eg-error-1110.png)\n"
 "\n"
 "`highway=trunk_link` linking `highway=primary`."
-msgstr "![](https://wiki.openstreetmap.org/w/images/b/b5/Osmose-eg-error-1110.png)\n\n`highway=trunk_link` joignant un `highway=primary`."
+msgstr ""
+"![](https ://wiki.openstreetmap.org/w/images/b/b5/Osmose-eg-error-1110.png)\n"
+"\n"
+"`highway=trunk_link` joignant un `highway=primary`."
 
 #: ../analysers/analyser_osmosis_highway_link.py:146
 msgid ""
@@ -2113,7 +2119,9 @@ msgstr "Surfaces de même type superposées (`waterway`, `natural` ou\n`landuse`
 
 #: ../analysers/analyser_osmosis_polygon_overlaps.py:91
 msgid "Separate the surface or merge, pay attention on other tags"
-msgstr "Séparez les surfaces ou fusionnez-les, en faisant attention aux autres attributs."
+msgstr ""
+"Séparez les surfaces ou fusionnez-les, en faisant attention aux autres "
+"attributs"
 
 #: ../analysers/analyser_osmosis_polygon.py:100
 msgid ""
