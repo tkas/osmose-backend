@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-28 19:47+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-07-15 03:38+0000\n"
+"Last-Translator: Jacob <jacob@carlbacker.se>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/osmose/backend/"
+"sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: ../analysers/analyser_merge_college_FR.py:31
 msgid "College not integrated"
@@ -401,7 +403,7 @@ msgstr ""
 
 #: ../plugins/Structural_Useless_Relation.py:31
 msgid "1-member relation"
-msgstr ""
+msgstr "relation med 1 medlem"
 
 #: ../plugins/Structural_Waterway.py:30
 msgid "Closed waterway"
