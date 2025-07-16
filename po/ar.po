@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the osmose-backend package.
 # 
 # Translators:
+# Abdullah, 2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Osmose\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-28 19:47+0200\n"
 "PO-Revision-Date: 2014-04-30 17:25+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Abdullah, 2025\n"
 "Language-Team: Arabic (http://app.transifex.com/openstreetmap-france/osmose/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4613,7 +4614,7 @@ msgid ""
 "Replace `junction=roundabout` on the entire circular road with `junction=circular`.\n"
 "\n"
 "If the node with `highway=traffic_signals`, `give_way` or `stop` is actually for the road entering the roundabout, tag it on that way only."
-msgstr "استبدل `junction=roundabout` على الطريق الدائري بأكمله بـ `junction=circular`.\n\nإذا كانت العقدة التي تحتوي على `highway=traffic_signals` أو `give_way` أو `stop` مخصصة في الواقع للطريق المؤدي إلى الدوار، فقم بوضع علامة عليها على هذا الطريق فقط."
+msgstr "استبدل `junction=roundabout` على الطريق الدائري بأكمله بـ `junction=circular`.\n\nإذا كانت العقدة التي تحتوي على `highway=traffic_signals` أو `give_way` أو `stop` مخصصة في الواقع للطريق المؤدي إلى الدوار، فقم بوضع الوسم على هذا الطريق فقط."
 
 #: ../analysers/analyser_osmosis_roundabout.py:116
 msgid ""
@@ -4902,7 +4903,7 @@ msgstr "خاصية موقف يجب أن تكون معلمة على منطقة م
 msgid ""
 "A parking property is set for a `parking:[side]` value that indicates that the parking area is mapped separately.\n"
 "Any parking details should be tagged on that object instead."
-msgstr "تم تعيين خاصية لموقف السيارات لقيمة `parking:[side]` تشير إلى أن منطقة وقوف السيارات مُخَطَّطة بشكل منفصل.\nيجب وضع علامة تفاصيل وقوف السيارات على هذا الكائن بدلاً من ذلك."
+msgstr "تم تعيين خاصية لموقف السيارات لقيمة `parking:[side]` تشير إلى أن منطقة وقوف السيارات مُخَطَّطة بشكل منفصل.\nيجب وضع وسم تفاصيل وقوف السيارات على هذا الكائن بدلاً من ذلك."
 
 #: ../plugins/Highway_Parking_Lane.py:126
 #: ../plugins/Highway_Parking_Lane.py:130
@@ -5440,35 +5441,35 @@ msgstr "القيمة \"{0}\" غير صالحة ولا يمكن تحليلها"
 
 #: ../analysers/analyser_merge_forest_compartment_FR.py:33
 msgid "Forest compartment not integrated"
-msgstr ""
+msgstr "قسم الغابة غير متكامل"
 
 #: ../analysers/analyser_merge_forest_compartment_FR.py:34
 msgid ""
 "Please use the geopf.fr WMTS FORETS.PUBLIQUES service or the ONF data at "
 "http://metadata.carmencarto.fr/geonetwork/105/api/records/fr-662043116-82880F0D-E1C4-4EF3-80AF-416977F118F1"
 " to create the appropriate boundary with forest compartment tags in OSM."
-msgstr ""
+msgstr "الرجاء استخدام خدمة geopf.fr WMTS FORETS.PUBLIQUES أو بيانات ONF على http://metadata.carmencarto.fr/geonetwork/105/api/records/fr-662043116-82880F0D-E1C4-4EF3-80AF-416977F118F1 لإنشاء الحدود المناسبة مع وسمات أقسام الغابات في OSM."
 
 #: ../analysers/analyser_merge_forest_compartment_FR.py:35
 msgid ""
 "Do not import the POI created by Osmose to OSM. It is just there to help you"
 " locate the missing forest compartment."
-msgstr ""
+msgstr "لا تستورد نقاط الاهتمام التي أنشأتها Osmose إلى OSM. هي موجودة فقط لمساعدتك على تحديد موقع قسم الغابة المفقود."
 
 #: ../analysers/analyser_merge_recycling_FR_bm.py:31
 #, python-brace-format
 msgid "{0} glass or food waste recycling not integrated"
-msgstr ""
+msgstr "{0} حاوية زجاج أو نفايات طعام غير متكاملة"
 
 #: ../analysers/analyser_merge_recycling_FR_bm.py:33
 #, python-brace-format
 msgid "{0} glass or food waste recycling, integration suggestion"
-msgstr ""
+msgstr "{0} حاوية زجاج أو نفايات طعام، اقتراح تكامل"
 
 #: ../analysers/analyser_merge_recycling_FR_bm.py:35
 #, python-brace-format
 msgid "{0} glass or food waste recycling update"
-msgstr ""
+msgstr "{0} تحديث حاوية زجاج أو نفايات طعام"
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:172
 msgid ""
@@ -5476,13 +5477,13 @@ msgid ""
 "\n"
 "Alternatively, draw the contour of the bridge using `man_made=bridge`\n"
 "and add information about the bridge architecture to this contour."
-msgstr ""
+msgstr "أضف [نوع جسر أو بنية](https://wiki.openstreetmap.org/wiki/Key:bridge) أكثر تفصيلاً.\n\nبدلاً من ذلك، ارسم محيط الجسر باستخدام `man_made=bridge`\nوأضف معلومات حول هندسة الجسر المعمارية إلى هذا المحيط."
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:182
 msgid ""
 "A bridge or tunnel is usually not connected to regular highways except at "
 "the end points."
-msgstr ""
+msgstr "جرت العادة أن الجسور أو الأنفاق لا تتصل بالطرق السريعة العادية إلا عند نقاط النهاية."
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:184
 msgid ""
@@ -5493,29 +5494,29 @@ msgid ""
 "\n"
 "If the bridge or tunnel actually consists of more than one bridge or tunnel separated by a section of regular highway,\n"
 "split the bridge or tunnel and adjust the tags accordingly."
-msgstr ""
+msgstr "افصل الجسر أو النفق عن الطريق السريع، أو أضف وسوم الجسور أو الأنفاق الغير موجودة.\n\nوإذا كان الطريق السريع متصلاً حقاً بالجسر أو النفق، فقد يكون ذلك فقط بواسطة جزء قصير من هذا الطريق السريع.\nفإذا كان الأمر كذلك، فقد تضطر إلى تقسيم الطريق المتصل وإضافة وسوم الجسور أو الأنفاق على الجزء ذي الصلة فقط.\n\nإذا كان الجسر أو النفق يتكون في الواقع من أكثر من جسر أو نفق يفصل بينهما جزء من طريق سريع عادي،\nقم بتقسيم الجسر أو النفق واضبط الوسوم وفقاً لذلك."
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:192
 msgid ""
 "There might be bad detections with connections at the bridge heads or tunnel"
 " entrances."
-msgstr ""
+msgstr "قد تكون هناك اكتشافات خاطئة بخصوص الاتصالات عند رؤوس الجسور أو مداخل الأنفاق."
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:195
 msgid "Bridge connected to crossing non-bridge highway"
-msgstr ""
+msgstr "جسر يتقاطع ويتصل بطريق سريع لكنه ليس جسراً"
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:197
 msgid "Tunnel connected to crossing non-tunnel highway"
-msgstr ""
+msgstr "نفق يتقاطع ويتصل بطريق سريع لكنه ليس نفقاً"
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:199
 msgid "Bridge connected to non-bridge highway"
-msgstr ""
+msgstr "جسر متصل بطريق سريع لكنه ليس جسراً"
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:201
 msgid "Tunnel connected to non-tunnel highway"
-msgstr ""
+msgstr "نفق متصل بطريق سريع لكنه ليس نفقاً"
 
 #: ../analysers/analyser_osmosis_parking_highway.py:113
 msgid ""
@@ -5525,73 +5526,73 @@ msgid ""
 "then add appropriate tags.\n"
 "\n"
 "See [parking](https://wiki.openstreetmap.org/wiki/Key:parking) tag on the wiki."
-msgstr ""
+msgstr "يجب أن يكون هناك طريق سريع `highway` يؤدي إلى مرفق ركن السيارات هذا وللسماح بالتوجيه الصحيح.\n أضف طريقاً أو تحقق مما إذا كان وسم `parking=*`صحيحاً.\nوإذا كان موقف سيارات على جانب الشارع (`parking=street_side`)،\nأو مكان توقف مؤقت (`parking=layby`)، أو مساراً، فأضف الوسمات المناسبة.\nانظر وسم [parking](https://wiki.openstreetmap.org/wiki/Key:parking) في الويكي."
 
 #: ../analysers/analyser_osmosis_powerline.py:467
 msgid "Unfinished power transmission line"
-msgstr ""
+msgstr "خط نقل طاقة غير مكتمل"
 
 #: ../analysers/analyser_osmosis_powerline.py:476
 msgid "Unfinished power distribution line"
-msgstr ""
+msgstr "خط توزيع طاقة غير مكتمل"
 
 #: ../analysers/analyser_osmosis_powerline.py:506
 msgid "Power support line management suggestion"
-msgstr ""
+msgstr "اقتراح لإدارة خطوط دعم الطاقة"
 
 #: ../analysers/analyser_osmosis_soundex.py:236
 msgid "Possibly misspelled name"
-msgstr ""
+msgstr "احتمال وجود خطأ إملائي في الاسم"
 
 #: ../analysers/analyser_osmosis_soundex.py:238
 msgid ""
 "A name \"sounds\" similar to that of another but is not spelled the same "
 "way."
-msgstr ""
+msgstr "اسم \"يبدو\" مشابهاً لاسم آخر ولكنه لا يُكتب بنفس الطريقة."
 
 #: ../analysers/analyser_osmosis_soundex.py:274
 #, python-brace-format
 msgid "{0} 'sounds' similar to {1} but is spelled differently"
-msgstr ""
+msgstr "الاسم {0} يبدو مشابهاً لـ {1} ولكنه يُكتب بشكل مختلف"
 
 #: ../plugins/Bicycle.py:23 ../plugins/Bicycle.py:221
 #, python-brace-format
 msgid "Uncommon value of {0}"
-msgstr ""
+msgstr "قيمة غير شائعة لـ {0}"
 
 #: ../plugins/Capacity.py:36
 msgid ""
 "Capacity tags should be positive integers. For some objects it can also be "
 "used to indicate the effective volume of that object (by default in m³)."
-msgstr ""
+msgstr "يجب أن تكون الوسوم المحددة للسعة أعدادًا صحيحة موجبة، أيضاً يمكنك استخدامها لبعض العناصر للإشارة إلى الحجم الفعلي لذلك العنصر (افتراضيًا بالمتر المكعب)."
 
 #: ../plugins/Capacity.py:71 ../plugins/Capacity.py:92
 #, python-brace-format
 msgid "\"{0}\" value \"{1}\" is not an integer nor a volume"
-msgstr ""
+msgstr "قيمة \"{1}\" للوسم \"{0}\" ليست عددًا صحيحًا ولا تمثل حجمًا"
 
 #: ../plugins/Name_Script.py:38
 msgid "Some characters don't match the language charset"
-msgstr ""
+msgstr "بعض الأحرف المكتوبة لا تتطابق مع مجموعة أحرف اللغة"
 
 #: ../plugins/Name_Script.py:49
 msgid "Non-printable character"
-msgstr ""
+msgstr "حرف غير قابل للطباعة"
 
 #: ../plugins/Name_Script.py:51
 msgid "A non-printable character has been used."
-msgstr ""
+msgstr "تم استخدام حرف غير قابل للطباعة."
 
 #: ../plugins/Number.py:34
 msgid ""
 "The tag expects a numeric value with decimals using a period character\n"
 "and not a comma. For guidelines on numeric values with units see [the\n"
 "wiki](https://wiki.openstreetmap.org/wiki/Map_Features/Units)."
-msgstr ""
+msgstr "الوسم هذا يتوقع أن تكون قيمته رقمية عشرية باستخدام علامة النقطة وليس الفاصلة،\nللحصول على إرشادات حول القيم الرقمية مع الوحدات، انظر [الويكي](https://wiki.openstreetmap.org/wiki/Map_Features/Units)."
 
 #: ../plugins/Number.py:67
 msgid "Discouraged unit alias"
-msgstr ""
+msgstr "اسم مستعار غير مستحسن للوحدة المدخلة "
 
 #: ../plugins/TagFix_BadKey.py:33
 msgid ""
@@ -5599,23 +5600,23 @@ msgid ""
 "It should be composed of alphanumeric characters: 0-9, a-z (preferably lower case),\n"
 "the separator '_' or ':'. See\n"
 "[Any_tags_you_like#Syntactic_conventions_for_new_tags](https://wiki.openstreetmap.org/wiki/Any_tags_you_like#Syntactic_conventions_for_new_tags)."
-msgstr ""
+msgstr "مفتاح الوسم يحتوي على أحرف لا يُنصح باستخدامها.\nيجب أن يتكون من أحرف أبجدية رقمية: 0-9، a-z (يُفضل أن تكون أحرفاً صغيرة)،\nوالفاصل '_' أو ':'. انظر\n[Any_tags_you_like#Syntactic_conventions_for_new_tags](https://wiki.openstreetmap.org/wiki/Any_tags_you_like#Syntactic_conventions_for_new_tags)."
 
 #: ../plugins/TagFix_BadKey.py:38
 msgid "Check the key, and correct it."
-msgstr ""
+msgstr "تحقق من المفتاح، وصححه."
 
 #: ../plugins/TagFix_BadKey.py:40
 msgid "There are certainly false positives."
-msgstr ""
+msgstr "من المؤكد وجود اكتشافات خاطئة."
 
 #: ../plugins/TagFix_BadKey.py:42 ../plugins/TagFix_BadKey.py:45
 msgid "Key with uncommon character"
-msgstr ""
+msgstr "مفتاح بحرف غير شائع"
 
 #: ../plugins/TagFix_BadKey.py:48
 msgid "Key suffix with uncommon character"
-msgstr ""
+msgstr "لاحقة مفتاح بحرف غير شائع"
 
 #: ../plugins/TagFix_Housenumber.py:43
 msgid ""
@@ -5623,23 +5624,23 @@ msgid ""
 "`all`, `alphabetic` or a number.\n"
 "* Tag `addr:inclusion=*` is only valid with values: `actual`, `estimate`\n"
 "and `potential`."
-msgstr ""
+msgstr "* الوسم `addr:interpolation=*` صالح فقط مع القيم: `even`، `odd`، `all`، `alphabetic` أو عدد.\n* الوسم `addr:inclusion=*` صالح فقط مع القيم: `actual`، `estimate` و `potential`."
 
 #: ../plugins/TagFix_Maxspeed.py:90
 msgid "Advisory or practical maxspeed exceeds legal speed limit"
-msgstr ""
+msgstr "السرعة القصوى المستحسنة أو الفعلية تتجاوز الحد الأقصى للسرعة القانونية"
 
 #: ../plugins/TagFix_MultipleTag2.py:29 ../plugins/TagFix_MultipleTag2.py:237
 #: ../plugins/TagFix_MultipleTag2.py:562 ../plugins/TagFix_MultipleTag2.py:748
 #, python-brace-format
 msgid "{0} contains the value of {1}"
-msgstr ""
+msgstr "{0} يحتوي على قيمة {1}"
 
 #: ../plugins/TagFix_MultipleTag2.py:29
 msgid ""
 "Possibly a different `alt_name` that is very similar to `name` was meant. "
 "Alternative names are often similar (but never equal) to the name."
-msgstr ""
+msgstr "الاسم البديل `alt_name` لابد أن يختلف عن الاسم الأساسي `name` كما أن الأسماء البديلة قد تكون قريبة من الاسم الأساسي (لكن لا يصح أن تكون نسخة طبق الأصل منه)."
 
 #: ../plugins/TagFix_MultipleTag2.py:33
 msgid ""
@@ -5647,28 +5648,28 @@ msgid ""
 "`parking=surface` or `parking=underground`, to distinguish between major "
 "parking lots and roadside parking. Add access tags and/or service ways "
 "through the parking lot as desired."
-msgstr ""
+msgstr "حدد نوع موقف السيارات، على سبيل المثال `parking=street_side`، `parking=surface` أو `parking=underground`، للتمييز بين مواقف السيارات الرئيسية ومواقف السيارات التي بجانب الطريق. أضف وسوم الوصول و / أو طرقاً خدمية لموقف السيارات حسب الرغبة."
 
 #: ../plugins/TagFix_Tree.py:58
 msgid "Conflicting tree properties"
-msgstr ""
+msgstr "خصائص الشجرة المتعارضة"
 
 #: ../plugins/TagFix_Tree.py:60
 msgid "The leaf type and/or leaf cycle does not match with the species."
-msgstr ""
+msgstr "نوع الورق و/أو دورة حياة الورق لا تتوافق مع الفصيلة."
 
 #: ../plugins/TagFix_Tree.py:62
 msgid "Verify that the species is correct, before adding the leaf properties."
-msgstr ""
+msgstr "تحقق من أن الفصيلة صحيحة، قبل إضافة خصائص الورق."
 
 #: ../plugins/TagFix_Tree.py:84
 #, python-brace-format
 msgid "Conflict between `{0}` and `{1}`"
-msgstr ""
+msgstr "تعارض بين `{0}` و `{1}`"
 
 #: ../plugins/TagFix_ZawgyiBurmese.py:41
 msgid "Value contains Zawgyi-encoded Burmese characters"
-msgstr ""
+msgstr "القيمة تحتوي على حروف بورمية بترميز Zawgyi."
 
 #: ../plugins/TagFix_ZawgyiBurmese.py:43
 msgid ""
@@ -5676,46 +5677,46 @@ msgid ""
 "value contains Burmese characters in the obsolete “Zawgyi” font encoding.\n"
 "As long as this value is stored in a non-standard way, modern devices cannot\n"
 "display it correctly. Please change the text to be encoded in Unicode."
-msgstr ""
+msgstr "يجب تخزين قيم الوسوم بترميز Unicode. ولكن، هذه القيمة تحتوي على حروف بورمية بترميز الخط القديم \"Zawgyi\".\nطالما أن هذه القيمة مخزنة بطريقة غير قياسية، فإن الأجهزة الحديثة لا تستطيع عرضها بشكل صحيح.\nالرجاء تغيير النص ليتم ترميزه بـ Unicode."
 
 #: ../plugins/TagRemove_Incompatibles.py:33
 msgid ""
 "This object has two tags that represent different features. According to the principle of\n"
 "[one feature, one OSM element](https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element),\n"
 "these should be mapped as two separate objects."
-msgstr ""
+msgstr "هذا العنصر له وسمان يمثلان ميزتين مختلفتين، و وفقاً لمبدأ\n[ميزة واحدة، عنصر OSM واحد](https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element)،\nيجب رسمهما كعنصرين منفصلين."
 
 #: ../plugins/TagWatchFrViPofm.py:98 ../plugins/TagWatchFrViPofm.py:109
 #, python-brace-format
 msgid "tag key: {0} => {1}"
-msgstr ""
+msgstr "مفتاح الوسم: {0} => {1}"
 
 #: ../plugins/TagWatchFrViPofm.py:100 ../plugins/TagWatchFrViPofm.py:104
 #: ../plugins/TagWatchFrViPofm.py:113 ../plugins/TagWatchFrViPofm.py:118
 #, python-brace-format
 msgid "tag value: {0}={1} => {2}"
-msgstr ""
+msgstr "قيمة الوسم: {0}={1} => {2}"
 
 #: ../plugins/indoor.py:21
 #, python-brace-format
 msgid "For the number of rooms in a facility, use `{0}` instead."
-msgstr ""
+msgstr "بالنسبة لعدد الغرف في المنشأة، استخدم `{0}` بدلاً من ذلك."
 
 #: ../analysers/analyser_merge_advertising_board_FR_brest.py:31
 msgid "Advertising board not integrated"
-msgstr ""
+msgstr "لوحة إعلانية غير متكاملة"
 
 #: ../analysers/analyser_merge_advertising_board_FR_brest.py:33
 msgid "Advertising board integration suggestion"
-msgstr ""
+msgstr "لوحة إعلانية، اقتراح تكامل"
 
 #: ../analysers/analyser_merge_advertising_board_FR_brest.py:35
 msgid "Advertising board update"
-msgstr ""
+msgstr "تحديث لوحة إعلانية"
 
 #: ../analysers/analyser_merge_public_transport_FR_rla.py:64
 #: ../analysers/analyser_merge_public_transport_FR_sillages.py:62
 #: ../analysers/analyser_merge_public_transport_FR_zestbus.py:62
 #: ../analysers/analyser_merge_public_transport_FR_zou_06.py:69
 msgid "{place} stop of {fields['stop_name']}"
-msgstr ""
+msgstr "موقف {place} لـ {fields['stop_name']}"

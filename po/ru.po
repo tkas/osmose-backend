@@ -791,7 +791,7 @@ msgstr ""
 
 #: ../analysers/analyser_osmosis_highway_traffic_signals.py:173
 msgid "Possible missing highway=traffic_signals nearby"
-msgstr ""
+msgstr "Возможно, отсутствует highway=traffic_signals поблизости"
 
 #: ../analysers/analyser_osmosis_powerline.py:504
 msgid "Unmatched voltage of line on substation"
@@ -997,7 +997,7 @@ msgstr "Не должен содержать тег ref={0}"
 
 #: ../analysers/analyser_osmosis_highway_name_close.py:87
 msgid "Close similar name"
-msgstr ""
+msgstr "Похожее название поблизости"
 
 #: ../analysers/analyser_osmosis_relation_public_transport.py:586
 msgid "Public transport relation route not in route_master relation"
@@ -1355,7 +1355,7 @@ msgstr ""
 #: ../analysers/analyser_osmosis_way_approximate.py:180
 #, python-brace-format
 msgid "{0} deviation of {1}m"
-msgstr ""
+msgstr "{0} отклонение {1}м."
 
 #: ../plugins/Highway_Lanes.py:130
 #, python-brace-format
@@ -2007,7 +2007,7 @@ msgid ""
 "It is very likely that the traffic signals on the junction are\n"
 "inconsistent with each other, see also\n"
 "[highway=traffic_signals](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals)."
-msgstr ""
+msgstr "Есть большая вероятность, что светофоры на перекрестке не согласованы друг с другом. См. также [highway=traffic_signals](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals). "
 
 #: ../analysers/analyser_osmosis_highway_tunnel_bridge.py:169
 msgid ""
@@ -2189,7 +2189,7 @@ msgstr ""
 
 #: ../analysers/analyser_osmosis_roundabout_level.py:273
 msgid "Adjust the tag `highway=*` of the roundabout."
-msgstr ""
+msgstr "Измените тег `highway=*` кольцевой развязки."
 
 #: ../analysers/analyser_osmosis_roundabout_level.py:275
 msgid ""
@@ -2209,7 +2209,7 @@ msgstr ""
 msgid ""
 "After verifying that it is an access road to the roundabout and they\n"
 "were well oriented, set the tag `oneway=yes` on the two segments."
-msgstr ""
+msgstr "Убедившись, что это подъездная дорога к кольцевой развязке, и она\nбыли хорошо ориентирована, установите тег `oneway=yes` на двух сегментах."
 
 #: ../analysers/analyser_osmosis_roundabout_level.py:288
 msgid ""
@@ -2318,7 +2318,7 @@ msgstr ""
 
 #: ../analysers/analyser_osmosis_tag_typo.py:136
 msgid "The tag is misspelled. Detection is based on statistics."
-msgstr ""
+msgstr "Тег написан с ошибкой. Определение основано на статистике."
 
 #: ../analysers/analyser_osmosis_tag_typo.py:138
 msgid "Check that the correction does not change the intent of the tag."
@@ -2336,11 +2336,11 @@ msgstr ""
 msgid ""
 "A `waterway=river` or a `waterway=stream` is an oriented way. The\n"
 "water must flow into another waterway or meet a `natural=coastline`."
-msgstr ""
+msgstr " Водные пути, такие как `waterway=river` или `waterway=stream`, следует рисовать в направлении течения. Они должны быть соединены либо с другим водным путем, либо с береговой линией `natural=coastline`."
 
 #: ../analysers/analyser_osmosis_waterway.py:167
 msgid "Link the waterway or invert its flow direction."
-msgstr ""
+msgstr "Подключите этот поток к другому потоку или измените направление потока."
 
 #: ../analysers/analyser_osmosis_way_angle.py:98
 #: ../analysers/analyser_osmosis_way_approximate.py:176
@@ -2390,7 +2390,7 @@ msgstr ""
 
 #: ../plugins/Ele_MontainPass_Peak.py:37
 msgid "Complete the tag ele=* missing."
-msgstr ""
+msgstr "Заполните отсутствующий тег ele=*."
 
 #: ../plugins/Highway_Lanes.py:34
 msgid "Non-numeric value, `lanes=*` must have an integer value."
@@ -2748,7 +2748,7 @@ msgstr ""
 msgid ""
 "`highway=road` has been used, choose a correct value, such as\n"
 "`highway=unclassified`."
-msgstr ""
+msgstr "Используется временное значение `highway=road`. Выберите правильное значение, например, `highway=unclassified`."
 
 #: ../plugins/TagRemove_FR.py:35
 msgid "`designation=*` is a United Kingdom-specific tag."
@@ -2960,7 +2960,7 @@ msgstr ""
 msgid ""
 "Based on the statistical frequency of the poles on this power line,\n"
 "there's likely an unmapped pole nearby."
-msgstr ""
+msgstr "На основании статистической частоты столбов на этой линии электропередачи,\nВероятно, поблизости есть не отмеченный на карте столб."
 
 #: ../plugins/TagFix_Area.py:43
 #, python-brace-format
@@ -3378,7 +3378,7 @@ msgstr "Убедитесь, что он еще не существует в др
 msgid ""
 "This is reported from an open data source, without any prior individual\n"
 "verification of this data."
-msgstr ""
+msgstr "Об этом сообщается из открытого источника данных, без какой-либо предварительной проверки этих данных."
 
 #: ../analysers/Analyser_Merge.py:1392
 msgid ""
@@ -3401,7 +3401,7 @@ msgstr "Это из открытого источника данных, но э�
 
 #: ../analysers/analyser_osmosis_highway_traffic_signals.py:164
 msgid "A nearby node already has the `highway=traffic_signals` tag."
-msgstr ""
+msgstr "У близлежащей точки уже есть тег `highway=traffic_signals`. "
 
 #: ../analysers/analyser_osmosis_highway_turn_lanes.py:141
 msgid "Bad lanes number or `turn:lanes` before and after this node"
@@ -4133,7 +4133,7 @@ msgstr ""
 
 #: ../analysers/analyser_osmosis_waterway.py:173
 msgid "Unconnected stream or wrong way flow"
-msgstr "Несвязанный поток или поток в неправильном направлении"
+msgstr " Поток, который ни с чем не соединен или течет в неправильном направлении."
 
 #: ../analysers/analyser_osmosis_relation_associatedStreet.py:662
 #, python-brace-format
@@ -4589,7 +4589,7 @@ msgstr ""
 #: ../plugins/Highway_Parking_Lane.py:234
 #, python-brace-format
 msgid "`{0}` is a value for key `{1}`"
-msgstr ""
+msgstr "`{0}` — это значение для ключа `{1}`"
 
 #: ../analysers/analyser_osmosis_highway_deadend.py:442
 msgid "Unconnected drive-through"
@@ -4620,13 +4620,13 @@ msgid ""
 "Replace `junction=roundabout` on the entire circular road with `junction=circular`.\n"
 "\n"
 "If the node with `highway=traffic_signals`, `give_way` or `stop` is actually for the road entering the roundabout, tag it on that way only."
-msgstr ""
+msgstr "Замените `junction=roundabout` на всей кольцевой дороге на `junction=circular`. \n\nЕсли узел с `highway=traffic_signals`, `give_way` или `stop` на самом деле относится к дороге, ведущей к кольцевой развязке, обозначьте его только в этом направлении. "
 
 #: ../analysers/analyser_osmosis_roundabout.py:116
 msgid ""
 "Make sure to tag `oneway=*` when using `junction=circular`. Unlike "
 "`junction=roundabout`, `junction=circular` does not imply `oneway=yes`."
-msgstr ""
+msgstr "Обязательно используйте тег `oneway=*` при использовании `junction=circular`. В отличие от `junction=roundabout`, `junction=circular` не подразумевает `oneway=yes`. "
 
 #: ../analysers/analyser_osmosis_useless.py:126
 msgid ""
@@ -4850,7 +4850,7 @@ msgstr ""
 msgid ""
 "Consider switching to the new [street parking tagging "
 "scheme](\"https://wiki.openstreetmap.org/wiki/Street_parking)."
-msgstr ""
+msgstr "Рассмотрите возможность перехода на новую [схему маркировки уличной парковки](\"https://wiki.openstreetmap.org/wiki/Street_parking\")."
 
 #: ../plugins/Highway_Parking_Lane.py:91
 msgid "Bad parking:[side]"
