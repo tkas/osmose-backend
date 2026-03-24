@@ -174,6 +174,7 @@ class default_simple(template_config):
         self.analyser["osmosis_highway_tunnel_bridge"] = "xxx"
         self.analyser["osmosis_waterway"] = "xxx"
         self.analyser["osmosis_duplicated_geotag"] = "xxx"
+        self.analyser["osmosis_duplicated_poi"] = "xxx"
         self.analyser["osmosis_highway_noexit"] = "xxx"
         self.analyser["osmosis_parking_highway"] = "xxx"
         self.analyser["osmosis_highway_bad_intersection"] = "xxx"

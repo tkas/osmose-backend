@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='1' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8566000' lon='2.3522000'>
+    <tag k='amenity' v='pharmacy' />
+    <tag k='name' v='Pharmacie Centre' />
+  </node>
+  <node id='2' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8566000' lon='2.3522000'>
+    <tag k='amenity' v='pharmacy' />
+    <tag k='name' v='Pharmacie Duplication' />
+  </node>
+  <node id='3' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8566000' lon='2.3522000'>
+    <tag k='amenity' v='hospital' />
+    <tag k='level' v='1' />
+  </node>
+
+  <node id='4' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8567000' lon='2.3523000'>
+    <tag k='amenity' v='hospital' />
+    <tag k='level' v='2' />
+  </node>
+  <node id='5' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8567000' lon='2.3523000'>
+    <tag k='leisure' v='stadium' />
+    <tag k='level' v='0' />
+  </node>
+  <node id='6' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8567000' lon='2.3523000'>
+    <tag k='leisure' v='stadium' />
+    <tag k='level' v='0' />
+    <tag k='name' v='Municipal Stadium' />
+  </node>
+
+  <node id='7' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8568000' lon='2.3524000'>
+    <tag k='shop' v='supermarket' />
+  </node>
+  <node id='8' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8568100' lon='2.3524100'>
+    <tag k='shop' v='bakery' />
+  </node>
+  <node id='9' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8568100' lon='2.3524100'>
+    <tag k='shop' v='bakery' />
+  </node>
+
+  <node id='20' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8569000' lon='2.3525000'>
+    <tag k='amenity' v='fuel' />
+  </node>
+  <node id='101' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8568900' lon='2.3524900' />
+  <node id='102' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8568900' lon='2.3525100' />
+  <node id='103' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8569100' lon='2.3525100' />
+  <node id='104' timestamp='2014-03-31T22:00:00Z' version='1' lat='48.8569100' lon='2.3524900' />
+
+  <way id='20' timestamp='2014-03-31T22:00:00Z' version='1'>
+    <nd ref='101' />
+    <nd ref='102' />
+    <nd ref='103' />
+    <nd ref='104' />
+    <nd ref='101' />
+    <tag k='amenity' v='fuel' />
+  </way>
+</osm>
