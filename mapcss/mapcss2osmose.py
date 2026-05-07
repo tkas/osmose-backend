@@ -650,13 +650,13 @@ class_index = 0
 meta_tags = None
 item_default = None
 item = class_id = level = tags = group = group_class = text = text_class = fix = None
-class_info_text = {}
+class_info_text: dict[str, str] = {}
 subclass_id = 0
 class_: Dict[str, Union[str, int, Dict[str, List[str]]]] = {}
-tests = []
+tests: list[Dict[str, Union[str, int, Dict[str, List[str]]]]] = []
 regex_store: Dict[List[str], str] = {}
 set_store: Set[str] = set()
-subclass_blacklist = []
+subclass_blacklist: list[str] = []
 is_meta_rule = False
 
 def to_p(t):
@@ -891,7 +891,7 @@ selector_index_map = {
     'closedrelation': -2,
 }
 
-mock_rules = {} # Contains the predicate selector part of mocked rules
+mock_rules: dict[str, str] = {} # Contains the predicate selector part of mocked rules
 def build_mock_rules():
     files = os.listdir(os.path.join(os.path.dirname(__file__), "mock_rules"))
     for f in list(map(lambda fn: fn[0:-7], files)):
