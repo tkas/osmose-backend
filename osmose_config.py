@@ -979,7 +979,7 @@ mexico_state("zacatecas", 2399704, "MX-ZAC")
 
 #########################################################################
 
-us_state = gen_country('north-america/us', country_base='usa', language='en', speed_limit_unit='mph')
+us_state = gen_country('north-america/us', country_base='usa', language='en', speed_limit_unit='mph', boundary_require_admin_centre=False)
 
 us_state("alabama", 161950, "US-AL", proj=26916)
 us_state("alaska", 1116270, "US-AK", proj=26905)
