@@ -103,7 +103,15 @@ FROM
         ways.id = way_nodes.way_id AND
         ways.tags != ''::hstore AND
         ways.tags?'natural' AND
-        ways.tags->'natural' IN ('coastline', 'sinkhole')
+        (
+            (
+                ways.tags->'natural' IN ('coastline', 'sinkhole')
+            ) OR (
+                ways.tags->'natural' = 'water' AND
+                ways.tags->'water' = 'basin' AND
+                ways.tags->'basin' = 'infiltration'
+            )
+        )
 UNION ALL
 SELECT
     ww.id,
@@ -162,7 +170,7 @@ but there is no `waterway=river|canal|stream` inside it.'''),
 eliminate the river bank polygon.'''))
         detail = T_(
 '''A `waterway=river` or a `waterway=stream` is an oriented way. The
-water must flow into another waterway or meet a `natural=coastline`.''')
+water must flow into another waterway, sinkhole, infiltration basin or meet a `natural=coastline`.''')
         fix = T_(
 '''Link the waterway or invert its flow direction.''')
         self.classs[2] = self.def_class(item = 1220, level = 2, tags = ['waterway', 'fix:imagery'],
