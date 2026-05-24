@@ -28,13 +28,15 @@ CREATE TEMP TABLE boundary AS
 SELECT
     id,
     linestring,
-    array_agg(boundary) AS boundaries
+    array_agg(boundary) AS boundaries,
+    array_agg(DISTINCT admin_level ORDER BY admin_level) AS admin_levels
 FROM (
 (
 SELECT
     ways.id,
     ways.linestring,
-    relations.tags->'boundary' AS boundary
+    relations.tags->'boundary' AS boundary,
+    relations.tags->'admin_level' AS admin_level
 FROM
     relations
     JOIN relation_members ON
@@ -52,7 +54,8 @@ UNION ALL
 SELECT
     ways.id,
     ways.linestring,
-    tags->'boundary' AS boundary
+    tags->'boundary' AS boundary,
+    tags->'admin_level' AS admin_level
 FROM
     ways
 WHERE
@@ -85,13 +88,17 @@ FROM
         -- Ways not linked
         NOT ST_Touches(b1.linestring, b2.linestring) AND
         -- Ways share inner space
-        ST_Crosses(b1.linestring, b2.linestring)
+        ST_Crosses(b1.linestring, b2.linestring) AND
+        -- Allowed intersections
+        ({0} IS NULL OR NOT {0} <@ (SELECT array_agg(DISTINCT a ORDER BY a) FROM (SELECT unnest(b1.admin_levels) UNION SELECT unnest(b2.admin_levels)) AS t(a)))
 """
 
 class Analyser_Osmosis_Boundary_Intersect(Analyser_Osmosis):
 
     def __init__(self, config, logger = None):
         Analyser_Osmosis.__init__(self, config, logger)
+        admin_level_intersection = self.config.options and self.config.options.get("allow_boundary_admin_level_intersection", None)
+        self.admin_level_intersection = "array['{}']".format("','".join(map(str, admin_level_intersection))) if admin_level_intersection else "NULL"
         self.classs[1] = self.def_class(item = 1060, level = 2, tags = ['boundary', 'geom', 'fix:chair'],
             title = T_('Boundary intersection'),
             detail = T_(
@@ -109,4 +116,4 @@ Two definitions of the same border.'''))
     def analyser_osmosis_common(self):
         self.run(sql10)
         self.run(sql12)
-        self.run(sql20, self.callback20)
+        self.run(sql20.format(self.admin_level_intersection), self.callback20)
