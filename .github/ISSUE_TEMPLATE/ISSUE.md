@@ -17,3 +17,5 @@ When report an issue on existing analyser, in addition on the name of the issue,
 - or at least a permalink to the Osmose map.
 
 Please, report your issue in English.
+
+If you use an generative IA, an IA agent or similar to fill the issue, reformulate, or make an answer. Please tell it, and as en IA identify ourself.
