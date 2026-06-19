@@ -567,17 +567,18 @@ class SourceHttpLastModified(Source):
 
 class SourceIGN(Source):
     def __init__(self, dep_code, **kwargs):
-        response = downloader.request_get("https://geoservices.ign.fr/bdtopo")
-        response.raise_for_status()
         if len(str(dep_code)) == 2:
             dep_code = f"0{dep_code}"
-        match = re.search(
-            fr"https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-[0-9]+_TOUSTHEMES_GPKG_[A-Z0-9]+_D{dep_code}_[-0-9]+/BDTOPO_3-[0-9]+_TOUSTHEMES_GPKG_[A-Z0-9]+_D{dep_code}_([-0-9]+).7z",
+        response = downloader.request_get(f"https://data.geopf.fr/telechargement/resource/BDTOPO?zone=D{dep_code}&format=GPKG")
+        response.raise_for_status()
+        match = re.findall(
+            fr"(https://data.geopf.fr/telechargement/resource/BDTOPO/(BDTOPO_3-[0-9]+_TOUSTHEMES_GPKG_[A-Z0-9]+_D{dep_code}_([-0-9]+)))",
             response.text
         )
-        url, date = match[0], match[1]
+        match = match[-1]
+        url, slug, date = match[0].replace('/resource/', '/download/'), match[1], match[2]
         kwargs.update({
-            "fileUrl": url,
+            "fileUrl": f"{url}/{slug}.7z",
             "millesime": date,
             "extract": "**/*.gpkg",
             "attribution": "IGN",
