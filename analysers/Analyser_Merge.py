@@ -414,15 +414,9 @@ class Source:
             self._zip_archive = zipfile.ZipFile(f, 'r')
             f = self._zip_archive.open(info)
         elif self.extract:
-            import libarchive.public # type: ignore
             _path = f.name
-            with libarchive.public.file_reader(_path) as archive:
-                out = io.BytesIO()
-                for entry in archive:
-                    if pathlib.Path(entry.pathname).match(self.extract):
-                        for block in entry.get_blocks():
-                            out.write(block)
-                        break
+            out = io.BytesIO()
+            self._libarchive_extract(_path, self.extract, out)
             out.seek(0)
             f.close()
             f = out
@@ -436,6 +430,16 @@ class Source:
             if self.filter:
                 f = self.filter(f)
         return f
+
+    @staticmethod
+    def _libarchive_extract(archive_path, pattern, out):
+        import libarchive.public # type: ignore
+        with libarchive.public.file_reader(archive_path) as archive:
+            for entry in archive:
+                if pathlib.Path(entry.pathname).match(pattern):
+                    for block in entry.get_blocks():
+                        out.write(block)
+                    break
 
     def _get_millesime(self) -> Optional[str]:
         if not self.millesime and self.fileUrl:
@@ -584,12 +588,29 @@ class SourceIGN(Source):
         match = match[-1]
         url, slug, date = match[0].replace('/resource/', '/download/'), match[1], match[2]
         kwargs.update({
-            "fileUrl": f"{url}/{slug}.7z",
+            "file": self._cached_gpkg(f"{url}/{slug}.7z", kwargs.get("fileUrlCache", 30), "**/*.gpkg"),
             "millesime": date,
-            "extract": "**/*.gpkg",
             "attribution": "IGN",
         })
         super().__init__(**kwargs)
+
+    def _cached_gpkg(self, fileUrl, delay, pattern):
+        gpkg = downloader.get_cache_path(fileUrl) + ".gpkg"
+        if os.path.exists(gpkg) and (time.time() - delay*24*60*60) <= os.path.getmtime(gpkg):
+            return gpkg
+
+        archive = downloader.path(fileUrl, delay)
+        tmp = gpkg + ".tmp"
+        try:
+            with open(tmp, "wb") as out:
+                self._libarchive_extract(archive, pattern, out)
+            os.replace(tmp, gpkg)
+            os.utime(gpkg, (time.time(), time.time()))
+        finally:
+            if os.path.exists(tmp):
+                os.remove(tmp)
+            os.remove(archive)
+        return gpkg
 
 class Parser:
     def __init__(self, srid: Optional[int] = None, source = None):
