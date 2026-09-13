@@ -403,6 +403,10 @@ class Source:
             # Do nothing about ZIP
             return downloader.path(self.fileUrl, self.fileUrlCache, post=self.post)
 
+    def is_file(self):
+        """True when the source content is directly readable as a file path (no intermediate stream)."""
+        return not (self.zip or self.extract or self.bz2 or self.gzip) and (self.file is not None or self.fileUrl is not None)
+
     def open(self, binary = False):
         if self.file:
             f = open(self.file, 'rb')
@@ -836,20 +840,37 @@ class GDAL(Parser):
 
     def import_(self, table, osmosis):
         try:
-            self.tmp_file = tempfile.NamedTemporaryFile(suffix = '.zip' if self.zip else '', mode = 'wb', delete = False)
-            shutil.copyfileobj(self.source.open(binary = True), self.tmp_file, 20*1024*1024)
-            self.tmp_file.close()
-
-            if self.zip:
-                # Resolve pattern filename into the zip archive.
-                z = zipfile.ZipFile(self.tmp_file.name, 'r')
-                info = next(filter(lambda zipinfo: fnmatch.fnmatch(zipinfo.filename, self.zip), z.infolist()))
+            if self.zip and self.source.is_file():
+                # zip archive is already a real file: read it in place via /vsizip/
+                archive = self.source.path()
+                with zipfile.ZipFile(archive, 'r') as z:
+                    info = next(filter(lambda zipinfo: fnmatch.fnmatch(zipinfo.filename, self.zip), z.infolist()))
                 if info:
                     self.zip = info.filename
+                # gdalsrsinfo vsizip need a .zip named file
+                link = archive + '.zip'
+                if not os.path.lexists(link):
+                    os.symlink(archive, link)
+                self.source_layer = ['/vsizip/' + os.path.abspath(link) + '/' + self.zip]
+            elif self.source.is_file():
+                # plain file source: feed the real path straight to ogr2ogr, no copy
+                self.source_layer = [self.source.path()]
+            else:
+                # extract the stream to a temp file
+                self.tmp_file = tempfile.NamedTemporaryFile(suffix = '.zip' if self.zip else '', mode = 'wb', delete = False)
+                shutil.copyfileobj(self.source.open(binary = True), self.tmp_file, 20*1024*1024)
+                self.tmp_file.close()
 
-            self.source_layer = [
-                ('/vsizip/' if self.zip else '' ) + self.tmp_file.name + (('/' + self.zip) if self.zip else ''),
-            ]
+                if self.zip:
+                    # Resolve pattern filename into the zip archive.
+                    z = zipfile.ZipFile(self.tmp_file.name, 'r')
+                    info = next(filter(lambda zipinfo: fnmatch.fnmatch(zipinfo.filename, self.zip), z.infolist()))
+                    if info:
+                        self.zip = info.filename
+
+                self.source_layer = [
+                    ('/vsizip/' if self.zip else '' ) + self.tmp_file.name + (('/' + self.zip) if self.zip else ''),
+                ]
             if self.layer:
                 self.source_layer.append(f"'{self.layer}'")
 
@@ -862,7 +883,8 @@ class GDAL(Parser):
                 elif projjson['id']['authority'] == 'IGNF' and projjson['id']['code'] == 'LAMB93':
                     self._srid = 2154
         except Exception as e:
-            os.remove(self.tmp_file.name)
+            if hasattr(self, 'tmp_file'):
+                os.remove(self.tmp_file.name)
             raise e
 
         wkt = PointInPolygon.PointInPolygon(self.polygon_id).polygon.as_simplified_wkt(self.source_srid(), self.proj) if self.polygon_id else None
