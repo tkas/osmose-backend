@@ -71,9 +71,12 @@ class SubAnalyser_Merge_Pitch_FR(SubAnalyser_Merge_Dynamic):
                 text = lambda tags, fields: {"en": ", ".join(filter(lambda i: i != "None", [fields["Numéro de l'installation sportive"], fields["Type d'équipement sportif"], fields["Nom de l'installation sportive"], fields["Nom de l'équipement sportif"]]))} )))
 
     def validLatLon(self, row):
-        if abs(float(row["Longitude"])) <= 180 and abs(float(row["Latitude"])) <= 90:
-            return row
-        else:
+        try:
+            if abs(float(row["Longitude"])) <= 180 and abs(float(row["Latitude"])) <= 90:
+                return row
+            else:
+                return []
+        except ValueError:
             return []
 
     surfaceMap = {
