@@ -53,6 +53,7 @@ class SubAnalyser_Merge_Shop_FR(SubAnalyser_Merge_Dynamic):
         #    title = T_('{0} update', title))
 
         dep_code = config.options.get('dep_code') or config.options.get('country').split('-')[1]
+        proj = {971: 5490, 972: 5490, 973: 2972, 974: 2975, 976: 4471}.get(dep_code, 2154)
 
         self.init(
             "https://www.data.gouv.fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret",
@@ -61,9 +62,9 @@ class SubAnalyser_Merge_Shop_FR(SubAnalyser_Merge_Dynamic):
                 attribution="INSEE",
                 dataset="5b7ffc618b4c4169d30727e0",
                 resource="a29c1297-1f92-4e2a-8f6b-8c902ce96c5f",
-            ), srid=2154, filters=(
+            ), srid=proj, filters=(
                 (
-                    ('codeCommuneEtablissement', '>=', dep_code),
+                    ('codeCommuneEtablissement', '>=', str(dep_code)),
                     ('codeCommuneEtablissement', '<', str(int(dep_code) + 1)),
                     ('coordonneeLambertAbscisseEtablissement', '!=', '[ND]'),
                     ('coordonneeLambertOrdonneeEtablissement', '!=', '[ND]'),
