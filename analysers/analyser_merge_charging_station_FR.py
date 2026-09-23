@@ -185,9 +185,9 @@ with `capacity=6` can sometimes match to 3 charging station with `capacity=2`'''
                         "ref:EU:EVSE": "id_station_itinerance"
                     },
                     mapping2={
-                        "charging_station:output": lambda fields: self.getPuissanceNominaleInKw(
-                            fields["puissance_nominale"]
-                        ),
+#                        "charging_station:output": lambda fields: self.getPuissanceNominaleInKw(
+#                            fields["puissance_nominale"]
+#                        ),
                         "operator:phone": "telephone_operateur",
                         "operator:email": "contact_operateur",
                         "start_date": "date_mise_en_service",
